@@ -25,4 +25,4 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag janssenlima/projeto-devops:latest
         docker tag janssenlima/projeto-devops:latest janssenlima/projeto-devops:$(date +%s)
-        docker push janssenlima/projeto-devops
+        docker push janssenlima/projeto-devops:latest janssenlima/projeto-devops:$(date +%s)
