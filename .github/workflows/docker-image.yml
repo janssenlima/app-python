@@ -24,7 +24,7 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +%s)"    
     - name: Build Docker images
-      run: docker build . --file Dockerfile --tag janssenlima/projeto-devops:$(date +%s) --tag janssenlima/projeto-devops:latest
+      run: docker build . --file Dockerfile --tag janssenlima/projeto-devops:${{ steps.date.outputs.date }} --tag janssenlima/projeto-devops:latest
     - name: Push Docker images
       run: |
         docker push janssenlima/projeto-devops
