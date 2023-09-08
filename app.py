@@ -1,6 +1,6 @@
 __author__ = "Janssen Lima"
 __email__ = "janssenreislima@gmail.com"
-__status__ = "dev"
+__status__ = "prod"
 
 import logging
 from flask import Flask
