@@ -27,4 +27,5 @@ jobs:
       run: docker build . --file Dockerfile --tag janssenlima/projeto-devops:${{ steps.date.outputs.date }} --tag janssenlima/projeto-devops:latest
     - name: Push Docker images
       run: |
-        docker push janssenlima/projeto-devops
+        docker push janssenlima/projeto-devops:${{ steps.date.outputs.date }}
+        docker push janssenlima/projeto-devops:latest
